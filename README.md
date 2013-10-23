@@ -4,18 +4,18 @@ A Leiningen template for creating Bright North's standard web applications
 
 Includes a stack of useful Clojure libraries and patterns:
 
- * Compojure routing
+ * [Compojure](https://github.com/weavejester/compojure) routing
  * A sensible default set of ring middleware
  * Setup for both lein ring server and uberjar invocation
- * Korma for SQL manipulation
- * Midje for testing
- * Dieter for compiling and compressing assets
- * conf-er for configuring the app (db details etc)
+ * [Korma](http://sqlkorma.com) for SQL manipulation
+ * [Midje](http://github.com/marick/Midje) for testing
+ * [Dieter](http://github.com/edgecase/dieter) for compiling and compressing assets
+ * [conf-er](https://github.com/TouchType/conf-er) for configuring the app (db details etc)
 
 And some wrappers round useful Java libraries:
 
- * ThymeLeaf integration for templating
- * Flyway database migrations
+ * [ThymeLeaf](http://www.thymeleaf.org/) integration for templating
+ * [Flyway](http://flywaydb.org/) database migrations
 
 
 ## Usage
