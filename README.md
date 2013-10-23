@@ -22,19 +22,22 @@ And some wrappers round useful Java libraries:
 
 First grab the template and install it (it's not on clojars ... yet)
 
- git clone https://github.com/BrightNorth/bn-webapp
- cd bn-webapp
- lein install
+      git clone https://github.com/BrightNorth/bn-webapp
+      cd bn-webapp
+      lein install
 
 Then edit your ''~/.lein/profiles.clj'' to include the plugin
 
- {:user {:plugins [[bn-webapp/lein-template "0.1.0-SNAPSHOT"]]}}
+     {:user {:plugins [[bn-webapp/lein-template "0.1.0-SNAPSHOT"]]}}
 
 Then you can create a project using the template as follows:
 
- cd <my-working-directory>
- lein new bn-webapp <project-name>
- lein ring server
+     cd <my-working-directory>
+     lein new bn-webapp <project-name>
+     lein ring server
+
+## Todo
+Create default Midje tests
 
 ## License
 
