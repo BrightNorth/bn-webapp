@@ -1,0 +1,33 @@
+(defproject {{name}} "0.1.0-SNAPSHOT"
+  :description "FIXME: write description"
+  :url "http://example.com/FIXME"
+  :dependencies [[org.clojure/clojure "1.5.1"]
+                 [ring/ring-core "1.2.0"]
+                 [com.cemerick/friend "0.2.0" :exclusions [ring/ring-core]]
+                 [compojure "1.1.5" :exclusions [ring/ring-core]]
+                 [ring/ring-jetty-adapter "1.2.0"]
+                 [dieter "0.4.1" :exclusions [ring/ring-core]]
+                 [org.clojure/data.json "0.1.1"]
+                 [org.thymeleaf/thymeleaf "2.0.19"]                
+                 [clj-time "0.5.1"]
+                 [conf-er "1.0.1"]
+                 [org.slf4j/slf4j-simple "1.6.1"]
+                 [mysql/mysql-connector-java "5.1.6"]
+                 [korma "0.3.0-RC5"]
+                 [com.googlecode.flyway/flyway-core "2.2"]         
+                 [org.clojure/tools.logging "0.2.6"]
+                 [log4j/log4j "1.2.16" :exclusions [javax.mail/mail
+                                                    javax.jms/jms
+                                                    com.sun.jdmk/jmxtools
+                                                    com.sun.jmx/jmxri]]]
+  :plugins [[lein-ring "0.8.5"]]
+  :ring {:handler {{name}}.core/handler
+         :init {{name}}.core/post-init!
+         :port 4000}
+  :jvm-opts ["-Dconfig=application.conf"]
+  :main {{name}}.core
+  :profiles
+  {:dev {:dependencies [[ring-mock "0.1.5"]
+                        [midje "1.5.1"]
+                        [ring/ring-devel "1.2.0"]]
+         :plugins [[lein-midje "3.1.1"]]}})
