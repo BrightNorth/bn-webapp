@@ -20,14 +20,20 @@
                                                     javax.jms/jms
                                                     com.sun.jdmk/jmxtools
                                                     com.sun.jmx/jmxri]]]
-  :plugins [[lein-ring "0.8.5"]]
   :ring {:handler {{name}}.core/handler
          :init {{name}}.core/post-init!
          :port 4000}
   :jvm-opts ["-Dconfig=application.conf"]
   :main {{name}}.core
-  :profiles
-  {:dev {:dependencies [[ring-mock "0.1.5"]
-                        [midje "1.5.1"]
-                        [ring/ring-devel "1.2.0"]]
-         :plugins [[lein-midje "3.1.1"]]}})
+  :plugins [[lein-ring "0.8.5"] [lein-midje "3.1.1"]]
+  :aot [{{name}}.core]
+  :profiles {
+             :dev {
+                   :dependencies [[ring-mock "0.1.5"]
+                                  [midje "1.5.1"]
+                                  [ring/ring-devel "1.2.0"]]
+                   }
+             }
+  :repositories [["snapshots" "http://nexus.brightnorth.co.uk/content/repositories/snapshots"]
+                 ["releases" "http://nexus.brightnorth.co.uk/content/repositories/releases"]]
+  )
