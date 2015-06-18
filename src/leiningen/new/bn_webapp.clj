@@ -25,7 +25,7 @@
              ["resources/public/login.html" (render "login.html" data)]
              ["resources/public/secret.html" (render "secret.html" data)]
              ["test/{{sanitized}}/test/core.clj" (render "core_test.clj" data)]
-             ["src/log4j.properties" (render "log4j.properties" data)]
+             ["src/logback.xml" (render "logback.xml" data)]
              ["src/migrations/V201310221843__create.sql" (render "V201310221843__create.sql" data)]
              ["src/{{sanitized}}/core.clj" (render "core.clj" data)]
              ["src/{{sanitized}}/db.clj" (render "db.clj" data)]
