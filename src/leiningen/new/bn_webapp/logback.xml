@@ -18,7 +18,7 @@
   </appender>
   <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <!--See also http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
-    <File>logs/terminator.log</File>
+    <File>logs/output.log</File>
     <encoder>
       <pattern>%d{dd MMM yyyy HH:mm:ss,SSS} %-5p %c - %m%n</pattern>
     </encoder>
@@ -27,7 +27,7 @@
     </filter>
     <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
       <maxIndex>20</maxIndex>
-      <FileNamePattern>logs/terminator.log.%i</FileNamePattern>
+      <FileNamePattern>logs/output.log.%i</FileNamePattern>
     </rollingPolicy>
     <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
       <MaxFileSize>10MB</MaxFileSize>
